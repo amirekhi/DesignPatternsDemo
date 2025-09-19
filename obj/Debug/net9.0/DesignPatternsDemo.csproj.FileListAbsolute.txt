@@ -1,0 +1,14 @@
+C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\DesignPatternsDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\DesignPatternsDemo.AssemblyInfoInputs.cache
+C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\DesignPatternsDemo.AssemblyInfo.cs
+C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\DesignPatternsDemo.csproj.CoreCompileInputs.cache
+C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\DesignPatternsDemo.dll
+C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\refint\DesignPatternsDemo.dll
+C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\DesignPatternsDemo.pdb
+C:\Users\PHOENIX\DesignPatternsDemo\bin\Debug\net9.0\DesignPatternsDemo.exe
+C:\Users\PHOENIX\DesignPatternsDemo\bin\Debug\net9.0\DesignPatternsDemo.deps.json
+C:\Users\PHOENIX\DesignPatternsDemo\bin\Debug\net9.0\DesignPatternsDemo.runtimeconfig.json
+C:\Users\PHOENIX\DesignPatternsDemo\bin\Debug\net9.0\DesignPatternsDemo.dll
+C:\Users\PHOENIX\DesignPatternsDemo\bin\Debug\net9.0\DesignPatternsDemo.pdb
+C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\DesignPatternsDemo.genruntimeconfig.cache
+C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\ref\DesignPatternsDemo.dll
