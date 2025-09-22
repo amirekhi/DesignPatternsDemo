@@ -12,3 +12,4 @@ C:\Users\PHOENIX\DesignPatternsDemo\bin\Debug\net9.0\DesignPatternsDemo.dll
 C:\Users\PHOENIX\DesignPatternsDemo\bin\Debug\net9.0\DesignPatternsDemo.pdb
 C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\DesignPatternsDemo.genruntimeconfig.cache
 C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\ref\DesignPatternsDemo.dll
+C:\Users\PHOENIX\DesignPatternsDemo\obj\Debug\net9.0\DesignPatternsDemo.sourcelink.json
