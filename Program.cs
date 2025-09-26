@@ -2,8 +2,9 @@
 
 using DesignPatternsDemo.Patterns;
 
-var dataSource = new DataSource();
-var sheet = new Sheet(dataSource);
-var chart = new Chart(dataSource);
-
-dataSource.Data = new List<int> { 1, 2, 3 };
+var box = new Box();
+var subscriber = new Subscriber();
+var subscriber2 = new Subscriber_2();
+box.Subscribe(subscriber.OnDataChanged);
+box.Subscribe(subscriber2.OnDataChanged);
+box.ChangeContent("New Content");
