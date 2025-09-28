@@ -2,9 +2,12 @@
 
 using DesignPatternsDemo.Patterns;
 
-var box = new Box();
-var subscriber = new Subscriber();
-var subscriber2 = new Subscriber_2();
-box.Subscribe(subscriber.OnDataChanged);
-box.Subscribe(subscriber2.OnDataChanged);
-box.ChangeContent("New Content");
+Validate handler = new Validate();
+Authenticate authHandler = new Authenticate();
+Authorize authzHandler = new Authorize();
+
+handler.SetNext(authHandler);
+authHandler.SetNext(authzHandler);
+
+var request = new HttpRequest("amir", "123");
+handler .HandleRequest(request);
