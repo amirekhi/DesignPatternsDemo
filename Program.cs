@@ -2,12 +2,15 @@
 
 using DesignPatternsDemo.Patterns;
 
-Validate handler = new Validate();
-Authenticate authHandler = new Authenticate();
-Authorize authzHandler = new Authorize();
+List<Client> clients = new List<Client>();
+Client vipCustomer = new VipCustomer("amir", "amir@gmail.com");
+Client RegCustomer = new RegularCustomer("jhonDoe", "doe@gmail.com");
+IVisitor emailClients = new EmailCustomers();
 
-handler.SetNext(authHandler);
-authHandler.SetNext(authzHandler);
+clients.Add(vipCustomer);
+clients.Add(RegCustomer);
 
-var request = new HttpRequest("amir", "123");
-handler .HandleRequest(request);
+foreach (var client in clients)
+{
+    client.Execute(emailClients);
+}
