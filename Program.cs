@@ -2,15 +2,7 @@
 
 using DesignPatternsDemo.Patterns;
 
-List<Client> clients = new List<Client>();
-Client vipCustomer = new VipCustomer("amir", "amir@gmail.com");
-Client RegCustomer = new RegularCustomer("jhonDoe", "doe@gmail.com");
-IVisitor emailClients = new EmailCustomers();
-
-clients.Add(vipCustomer);
-clients.Add(RegCustomer);
-
-foreach (var client in clients)
-{
-    client.Execute(emailClients);
-}
+Interpreter interpreter = new Interpreter();
+Context context = new Context();
+int result = interpreter.Interpret("1 + 2 * 3", context);
+Console.WriteLine($"Result: {result}");
