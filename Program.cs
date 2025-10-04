@@ -1,8 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using DesignPatternsDemo.Patterns;
+using DesignPatternsDemo.Patterns.Structural;
 
-Interpreter interpreter = new Interpreter();
-Context context = new Context();
-int result = interpreter.Interpret("1 + 2 * 3", context);
-Console.WriteLine($"Result: {result}");
+IItem mouse = new Mouse();
+IItem keyboard = new Keyboard();
+CompBox box = new CompBox();
+CompBox box_2 = new CompBox();
+
+box.AddItem(mouse);
+box.AddItem(keyboard);
+box_2.AddItem(box);
+float totalPrice = box_2.GetPrice();
+Console.WriteLine($"Total Price: {totalPrice}");
