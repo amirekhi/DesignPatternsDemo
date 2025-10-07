@@ -47,20 +47,10 @@ namespace DesignPatternsDemo.Patterns.Structural
         }
     }
 
-    public class AdvancedRemote : RemoteControl
+    public class AdvancedRemote : Remote
     {
         public AdvancedRemote(IDevice device) : base(device)
         {
-        }
-
-        public override void PowerOn()
-        {
-            device.TurnOn();
-        }
-
-        public override void PowerOff()
-        {
-            device.TurnOff();
         }
 
         public void SetChannel(int channel)
