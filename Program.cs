@@ -1,9 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using DesignPatternsDemo.Patterns;
 using DesignPatternsDemo.Patterns.Structural;
 
-VideoEditor videoEditor = new VideoEditor(new Video());
-videoEditor.Edit(new BlackAndWhite());
-videoEditor.Edit(new BlueTheme());
-videoEditor.Edit(new ThirdPartyAdapter(new SomeThirdPartyLib()));   
+AdvancedRemote lgAdvancedRemote = new AdvancedRemote(new LgTV());
+lgAdvancedRemote.PowerOn();
+lgAdvancedRemote.PowerOff();
+AdvancedRemote sonyAdvancedRemote = new AdvancedRemote(new SonyTV());
+sonyAdvancedRemote.PowerOn();
+sonyAdvancedRemote.PowerOff();
+sonyAdvancedRemote.SetChannel(5);
+sonyAdvancedRemote.VolumeUp();
+sonyAdvancedRemote.VolumeDown();
+RemoteControl sonyRemote = new Remote(new SonyTV());
+sonyRemote.PowerOn();
+sonyRemote.PowerOff();
