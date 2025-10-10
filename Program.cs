@@ -1,16 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using DesignPatternsDemo.Patterns.Structural;
+using DesignPatternsDemo.Patterns.Structural.Proxy;
 
-AdvancedRemote lgAdvancedRemote = new AdvancedRemote(new LgTV());
-lgAdvancedRemote.PowerOn();
-lgAdvancedRemote.PowerOff();
-AdvancedRemote sonyAdvancedRemote = new AdvancedRemote(new SonyTV());
-sonyAdvancedRemote.PowerOn();
-sonyAdvancedRemote.PowerOff();
-sonyAdvancedRemote.SetChannel(5);
-sonyAdvancedRemote.VolumeUp();
-sonyAdvancedRemote.VolumeDown();
-RemoteControl sonyRemote = new Remote(new SonyTV());
-sonyRemote.PowerOn();
-sonyRemote.PowerOff();
+VideoList videoList = new VideoList();
+videoList.AddVideo("video1");
+videoList.AddVideo("video2");
+
+Video vid = videoList.GetVideo("video1");
+vid.GetVideoId();
+Console.WriteLine($"Video ID: {vid.GetVideoId()}");
+vid.Download();
+//just checking if the video is already downloaded
+vid.Download();
+
+vid.Render();
