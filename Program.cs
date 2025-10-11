@@ -1,16 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using DesignPatternsDemo.Patterns.Structural.Proxy;
+using DesignPatternsDemo.Patterns.Structural;
 
-VideoList videoList = new VideoList();
-videoList.AddVideo("video1");
-videoList.AddVideo("video2");
+CropType cropType = CropType.Wheat;
+CropFactory factory = new CropFactory();
+CropIcon cropIcon = factory.GetCropIcon(cropType);
+Crop crop = new Crop(0, 0, cropIcon);
 
-Video vid = videoList.GetVideo("video1");
-vid.GetVideoId();
-Console.WriteLine($"Video ID: {vid.GetVideoId()}");
-vid.Download();
-//just checking if the video is already downloaded
-vid.Download();
+ crop.Render();
 
-vid.Render();
+CropList cropList = new CropList();
+cropList.Render();
+cropList.AddCrop(crop);
+cropList.Render();
