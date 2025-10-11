@@ -83,19 +83,7 @@ namespace DesignPatternsDemo.Patterns.Structural
         {
             _crops.Add(crop);
         }
-        public CropList()
-        {
-            //representing a database fetch of crops data and adding them to the list
-            CropType type = CropType.Wheat;
-            CropFactory factory = new CropFactory();
-            CropIcon icon = factory.GetCropIcon(type);
-            Crop crop1 = new Crop(0, 5, icon);
-            Crop crop2 = new Crop(1, 2, icon);
-            Crop crop3 = new Crop(3, 4, icon);
-            AddCrop(crop1);
-            AddCrop(crop2);
-            AddCrop(crop3);
-        }
+
 
         public void Render()
         {
@@ -103,6 +91,33 @@ namespace DesignPatternsDemo.Patterns.Structural
             {
                 crop.Render();
             }
+        }
+    }
+
+
+    public class CropService
+    {
+        private readonly CropFactory _cropFactory;
+
+        public CropService(CropFactory cropFactory)
+        {
+            _cropFactory = cropFactory;
+        }
+
+        public CropList GetCrops()
+        {
+            CropList cropList = new CropList();
+            CropType type = CropType.Wheat;
+            CropIcon icon = _cropFactory.GetCropIcon(type);
+            Crop crop1 = new Crop(0, 1, icon);
+            Crop crop2 = new Crop(0, 2, icon);
+            Crop crop3 = new Crop(0, 3, icon);
+            Crop crop4 = new Crop(0, 4, icon);
+            cropList.AddCrop(crop1);
+            cropList.AddCrop(crop2);
+            cropList.AddCrop(crop3);
+            cropList.AddCrop(crop4);
+            return cropList;
         }
     }
 }
