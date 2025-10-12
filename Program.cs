@@ -2,7 +2,6 @@
 
 using DesignPatternsDemo.Patterns.Structural;
 
-CropFactory cropFactory = new CropFactory();
-CropService cropService = new CropService(cropFactory);
-CropList cropList = cropService.GetCrops();
-cropList.Render();
+OrderRequest order = new OrderRequest(1, "Laptop", 1);
+OrderServiceFacade orderService = new OrderServiceFacade();
+orderService.PlaceOrder("admin", "password", order);
