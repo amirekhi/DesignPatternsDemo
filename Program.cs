@@ -2,6 +2,8 @@
 
 using DesignPatternsDemo.Patterns.Structural;
 
-OrderRequest order = new OrderRequest(1, "Laptop", 1);
-OrderServiceFacade orderService = new OrderServiceFacade();
-orderService.PlaceOrder("admin", "password", order);
+DataStorage dataStorage = new DataStorage();
+EncryptedData encryptedData = new EncryptedData(dataStorage);
+encryptedData.Save("Sensitive Data");
+CompressedData compressedData = new CompressedData(encryptedData);
+compressedData.Save("Data Compressed");
