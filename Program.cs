@@ -1,22 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using DesignPatternsDemo.Patterns.Creational;
-using DesignPatternsDemo.Patterns.Structural;
-var addr = new Address("1st Ave", "NY");
-var original = new Person("Alice", 30, addr);
 
-var deepClone = original.Clone();
-var shallowClone = original.ShallowCopy();
+AppSetting appsetting = AppSetting.Instance;
+appsetting.Set("Setting1", "Value1");
 
-deepClone.Name = "Bob";
-deepClone.Address.City = "LA";
+AppSetting appSetting2 = AppSetting.Instance;
+appSetting2.Set("Setting2", 42);
 
-shallowClone.Name = "Charlie";
-shallowClone.Address.City = "SF";
-
-Console.WriteLine(original);        // Name: Alice, Age: 30
-Console.WriteLine(original.Address); // Street: 1st Ave, City: SF
-Console.WriteLine(deepClone);       // Name: Bob, Age: 30
-Console.WriteLine(deepClone.Address); // Street: 1st Ave, City: LA
-Console.WriteLine(shallowClone);    // Name: Charlie, Age: 30
-Console.WriteLine(shallowClone.Address); // Street: 1st Ave, City: SF
+Console.WriteLine(appsetting.Get("Setting1"));
+Console.WriteLine(appSetting2.Get("Setting2"));
+//appsetting has access to the same instance thats why we can see changes from appsetting2 from line 9
+Console.WriteLine(appsetting.Get("Setting2"));
