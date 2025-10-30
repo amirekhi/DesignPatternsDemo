@@ -43,7 +43,7 @@ namespace DesignPatternsDemo.Patterns.Creational
         }
     }
 
-// this is where the magic happens the client who uses this controller knows hes getting a Twig engine but doesnt know how the internal state is tweaked so that he is gettin a twig engine
+    // this is where the magic happens the client who uses this controller knows hes getting a Twig engine but doesnt know how the internal state is tweaked so that he is gettin a twig engine
     public class TwigController : Controller
     {
         public override IEngine CreateEngine()
@@ -53,3 +53,12 @@ namespace DesignPatternsDemo.Patterns.Creational
     }
 
 }
+
+
+
+// Controller controller = new Controller();
+// string result = controller.Render("view.blade.php", new Dictionary<string, object>());
+// Console.WriteLine(result);
+// Controller twigController = new TwigController();
+// string twigResult = twigController.Render("view.twig.php", new Dictionary<string, object>());
+// Console.WriteLine(twigResult);
