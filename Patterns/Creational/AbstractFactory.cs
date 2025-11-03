@@ -108,3 +108,13 @@ namespace DesignPatternsDemo.Patterns.Creational
     }
 
 }
+
+
+//factory implementation is instanciated
+// IGUIFactory factory = new WindowsFactory();
+// //now factory creates instances of certain groupe
+// IButton button = factory.CreateButton();
+// ICheckbox checkbox = factory.CreateCheckbox();
+// //testing the created instances
+// button.Click();
+// checkbox.Check();
